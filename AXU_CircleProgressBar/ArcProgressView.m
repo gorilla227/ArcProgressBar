@@ -123,16 +123,18 @@
             isAscendProgress = (targetProgress > progressNumber)?YES:NO;
             
             [labelProgress.layer addAnimation:transition forKey:nil];
+            [CATransaction begin];
+            [CATransaction setDisableActions:NO];
+            [CATransaction setAnimationTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn]];
+            [CATransaction setAnimationDuration:kAnimationDuration];
+            [progressBarLayer setStrokeEnd:isAscendProgress?progressBarLayer.strokeEnd+0.01:progressBarLayer.strokeEnd-0.01];
+            [CATransaction commit];
         }
         else {
             [labelProgress setText:[NSString stringWithFormat:@"%.f%%", progress * 100]];
+            [progressBarLayer setStrokeEnd:progress];
         }
-        [CATransaction begin];
-        [CATransaction setDisableActions:!animated];
-        [CATransaction setAnimationTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn]];
-        [CATransaction setAnimationDuration:kAnimationDuration * fabs(progress - progressBarLayer.strokeEnd) * 100];
-        [progressBarLayer setStrokeEnd:progress];
-        [CATransaction commit];
+        
     }
 }
 
@@ -145,6 +147,12 @@
         if (progressNumber != targetProgress) {
             [labelProgress.layer addAnimation:transition forKey:nil];
             [labelProgress setText:[NSString stringWithFormat:@"%lu%%", isAscendProgress?++progressNumber:--progressNumber]];
+            [CATransaction begin];
+            [CATransaction setDisableActions:NO];
+            [CATransaction setAnimationTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn]];
+            [CATransaction setAnimationDuration:kAnimationDuration];
+            [progressBarLayer setStrokeEnd:isAscendProgress?progressBarLayer.strokeEnd+0.01:progressBarLayer.strokeEnd-0.01];
+            [CATransaction commit];
         }
     }
 }
