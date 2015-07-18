@@ -14,6 +14,7 @@
 		B282CC8B1ACC91BB008665B5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B282CC8A1ACC91BB008665B5 /* Images.xcassets */; };
 		B282CC8E1ACC91BB008665B5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B282CC8C1ACC91BB008665B5 /* LaunchScreen.xib */; };
 		B282CC9A1ACC91BB008665B5 /* AXU_CircleProgressBarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B282CC991ACC91BB008665B5 /* AXU_CircleProgressBarTests.m */; };
+		B282CCA71ACCA694008665B5 /* ArcProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = B282CCA61ACCA694008665B5 /* ArcProgressView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		B282CC931ACC91BB008665B5 /* AXU_CircleProgressBarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AXU_CircleProgressBarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B282CC981ACC91BB008665B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B282CC991ACC91BB008665B5 /* AXU_CircleProgressBarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AXU_CircleProgressBarTests.m; sourceTree = "<group>"; };
+		B282CCA51ACCA694008665B5 /* ArcProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArcProgressView.h; sourceTree = "<group>"; };
+		B282CCA61ACCA694008665B5 /* ArcProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArcProgressView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,8 @@
 			children = (
 				B282CC811ACC91BB008665B5 /* AppDelegate.h */,
 				B282CC821ACC91BB008665B5 /* AppDelegate.m */,
+				B282CCA51ACCA694008665B5 /* ArcProgressView.h */,
+				B282CCA61ACCA694008665B5 /* ArcProgressView.m */,
 				B282CC841ACC91BB008665B5 /* ViewController.h */,
 				B282CC851ACC91BB008665B5 /* ViewController.m */,
 				B282CC871ACC91BB008665B5 /* Main.storyboard */,
@@ -221,6 +226,7 @@
 			files = (
 				B282CC861ACC91BB008665B5 /* ViewController.m in Sources */,
 				B282CC831ACC91BB008665B5 /* AppDelegate.m in Sources */,
+				B282CCA71ACCA694008665B5 /* ArcProgressView.m in Sources */,
 				B282CC801ACC91BB008665B5 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
