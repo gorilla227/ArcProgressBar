@@ -132,7 +132,13 @@
         }
         else {
             [labelProgress setText:[NSString stringWithFormat:@"%.f%%", progress * 100]];
+//            [progressBarLayer setStrokeEnd:progress];
+            [CATransaction begin];
+            [CATransaction setDisableActions:YES];
+            [CATransaction setAnimationTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn]];
+            [CATransaction setAnimationDuration:kAnimationDuration];
             [progressBarLayer setStrokeEnd:progress];
+            [CATransaction commit];
         }
         
     }
