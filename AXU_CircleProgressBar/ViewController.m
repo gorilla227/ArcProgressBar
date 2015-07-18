@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    progressView = [[ArcProgressView alloc] initWithDiameter:100.0f arcWidth:5.0f arcRadian:300.0f];
+    progressView = [[ArcProgressView alloc] initWithDiameter:100.0f arcWidth:5.0f arcRadian:360.0f];
     [self.view addSubview:progressView];
     [progressView changeProgress:0.0f isAnimated:NO];
 }

@@ -123,7 +123,6 @@
             isAscendProgress = (targetProgress > progressNumber)?YES:NO;
             
             [labelProgress.layer addAnimation:transition forKey:nil];
-            [labelProgress setText:[NSString stringWithFormat:@"%lu%%", isAscendProgress?++progressNumber:--progressNumber]];
         }
         else {
             [labelProgress setText:[NSString stringWithFormat:@"%.f%%", progress * 100]];
